@@ -224,7 +224,7 @@ class login:
         database_password: str = None,
         database_host: str = None,
         db_obj: object = None,
-        users_table: str = "Users4",
+        users_table: str = "Users",
         username_field: str = "user",
         password_field: str = "pass",
         hash_password: bool = False,
@@ -333,7 +333,7 @@ class login:
         if not users:
             return "Invalid Username"
         else:
-            ## self.database.search_email(email)
+            ## self.login.search_email(email)
             pass
 
 
@@ -345,14 +345,14 @@ if __name__ == "__main__":
         database_username="root",
         database_password="dorsa-co",
         database_host="localhost",
-        users_table="Users4",
+        users_table="Users",
     )
     answer = lo.signup(
-        "Users4", "Elham", "Hatefi", "12345", "daniz.ai2022@gmail.com"
+        "Users", "Elham", "Hatefi", "12345", "daniz.ai2022@gmail.com"
     )  #  It is okkkkkkkkkkkkkkkkkkkkkkkk
     print(answer)
     answer = lo.change_password(
-        "Users4", "Elham3", "12345", "12345678"
+        "Users", "Elham", "12345", "12345678"
     )  #  It is okkkkkkkkkkkkkkkkkkkkkkkk
     print(answer)
     ans = answer = lo.login("Elham", "12345678")  #  It is okkkkkkkkkkkkkkkkkkkkkkkk
